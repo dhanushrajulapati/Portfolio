@@ -21,7 +21,14 @@ const Internship = () => {
         className="mx-auto max-w-3xl rounded-2xl border border-stone-800 bg-stone-900/30 p-8 shadow-md backdrop-blur-lg text-center"
       >
         <h3 className="text-2xl font-semibold text-white">
-          Pranayuv Technologies
+          <a
+            href="https://www.pranayuv.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition-colors duration-300"
+          >
+            Pranayuv Technologies
+          </a>
         </h3>
         <p className="text-stone-400 mt-1 text-sm">May 2025 – July 2025 | Hybrid</p>
 

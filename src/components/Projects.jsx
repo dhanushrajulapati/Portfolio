@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import projectGif from "../assets/projects/project-1.gif"; // Emotion Detection (GIF)
-import project2 from "../assets/projects/project-2.jpg"; 
-import project3 from "../assets/projects/project-3.jpg";  
-import project4 from "../assets/projects/project-4.png"  // WorkNear (JPG)
+import project2 from "../assets/projects/project-2.jpg";
+import project3 from "../assets/projects/project-3.jpg";
+import project4 from "../assets/projects/project-4.png"; // WorkNear (JPG)
 
 const PROJECTS = [
   {
@@ -11,6 +11,7 @@ const PROJECTS = [
     description:
       "Developed a multimodal emotion recognition system integrating audio and text analysis to achieve 87% accuracy. Combined NLP with audio feature extraction, reducing classification errors by 28% and enabling real-time emotion detection with sub-second response time.",
     technologies: ["Python", "TensorFlow", "NLTK", "librosa", "scikit-learn"],
+    github: "https://github.com/dhanushrajulapati/Emotion-detection-using-Audio-and-text",
   },
   {
     title: "WorkNear – Local Service Marketplace(Internship Project)",
@@ -25,6 +26,7 @@ const PROJECTS = [
     description:
       "Designed a responsive photography portfolio using React and Tailwind CSS to showcase event albums. Integrated Calendly for seamless booking, improving client conversions by 41% and boosting mobile load speed by 53%.",
     technologies: ["React", "Tailwind CSS", "Calendly"],
+    github: "https://github.com/kushalthandra/Abhi_Photography",
   },
   {
     title: "Three-Phase Transmission Line Fault Detection (IoT)",
@@ -81,7 +83,8 @@ const Projects = () => {
               <p className="mb-4 text-stone-400 leading-relaxed">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, i) => (
                   <span
                     key={i}
@@ -91,6 +94,18 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+
+              {/* GitHub Link */}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-4 py-2 rounded-md bg-stone-800 border border-stone-700 text-stone-300 hover:bg-stone-700 transition-colors duration-300"
+                >
+                  🔗 GitHub
+                </a>
+              )}
             </motion.div>
           </div>
         ))}
