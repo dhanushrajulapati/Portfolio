@@ -29,11 +29,10 @@ const Hero = () => {
       <div className="flex flex-wrap lg:flex-row-reverse">
         {/* Profile Image */}
         <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:p-8">
+          <div className="flex justify-center lg:p-8  " >
             <motion.img
               src={profilePic}
               alt="Dhanush Rajulapati"
-              className="border border-stone-900 rounded-3xl"
               width={450}
               height={450}
               initial={{ x: 100, opacity: 0 }}
